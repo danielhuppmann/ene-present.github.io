@@ -14,8 +14,8 @@ if not os.path.exists(fpth):
     raise IOError('{} does not exist'.format(fpth))
 
 # make notebook html
-cmd = "jupyter nbconvert {} --to slides --reveal-prefix={}"
-cmd = cmd.format(fpth, os.path.join(here, 'reveal.js'))
+cmd = "jupyter nbconvert {} --to slides --reveal-prefix=../reveal.js"
+cmd = cmd.format(fpth)
 fdir = os.path.dirname(fpth)
 subprocess.check_call(cmd.split(), cwd=fdir)
 
