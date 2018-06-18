@@ -4,6 +4,14 @@
 
 - `nbconvert`
 
+## After cloning
+
+We use a submodule for `reveal.js` so make sure to
+
+```
+git submodule update --init --recursive
+```
+
 ## Make Your Presentation
 
 - make a new folder
