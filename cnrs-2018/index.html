@@ -12303,7 +12303,7 @@ $ messageix-dl <span class="c1"># install all tutorials to your current director
 <p>$\sum_{\substack{n^L,t,m \\ y^V \leq y}} output_{n^L,t,y^V,y,m,n,c,l} \cdot ACT_{n^L,t,y^V,y,m}$<br>
 $- \sum_{\substack{n^L,t,m, \\ y^V \leq y}} input_{n^L,t,y^V,y,m,n,c,l} \cdot ACT_{n^L,t,m,y}$<br>
 $\geq demand_{n,c,l,y} \quad \forall \ l \in L$</p>
-<p>While <code>demand</code> must be met, it can also be <em>exceeded</em> allowing the model to plan for future periods of demand for storable commodities.</p>
+<p>The <code>COMMODITY_BALANCE</code> equation is formulated as an inequality implying that demand must be met, but supply of a commodity can exceed demand. The formulation implicitly assumes "zero cost of disposal", as is common in economics. This implementation simplifies calibration and is in line with conventions in energy systems modelling.</p>
 
 </div>
 </div>
@@ -12948,7 +12948,7 @@ $initial\_activity\_up_{n,t,y,h}
 <div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scenario</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="s1">&#39;MESSAGE&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scenario</span><span class="o">.</span><span class="n">solve</span><span class="p">()</span>
 </pre></div>
 
 </div>
